@@ -1,8 +1,22 @@
-# React + Vite
+# Audible Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based clone of Amazon Audible, designed to provide a seamless audio book browsing experience through a user-friendly homepage. This project showcases key features of Audible, allowing users to explore audio books.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse and search for audio books
+- Responsive design for mobile and desktop
+
+## Tech Stack
+
+- **Frontend**: React, React Router
+- **Styling**: CSS Modules / Styled Components
+
+## Installation
+
+ Get the repository:
+   ```bash
+   git clone https://github.com/netmanoj/audible-clone.git
+   cd audible-clone
+   npm install
+   npm run dev
