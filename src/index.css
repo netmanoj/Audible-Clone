@@ -1,0 +1,554 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px; /* Top/Bottom and Left/Right padding */
+  background-color: #f9f9f9; /* Mild background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.logo img {
+  height: 40px; /* Set a consistent height for the logo */
+  margin-right: 20px; /* Space between logo and nav items */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow the navbar to take available space */
+}
+
+.nav-links {
+  display: flex;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  gap: 20px; /* Space between nav items */
+  list-style: none; /* Remove bullet points */
+}
+
+.nav-links li {
+  display: inline; /* Ensure items are inline */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333; /* Text color */
+  font-weight: 500; /* Slightly bolder font */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-links li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between right elements */
+  margin-left: auto; /* Pushes the right section to the far right */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc; /* Border for search container */
+  border-radius: 4px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.search-container input {
+  border: none; /* Remove default border */
+  padding: 8px; /* Padding inside the input */
+  outline: none; /* Remove outline on focus */
+}
+
+.search-container .search-btn {
+  padding: 8px 12px; /* Button padding */
+  background-color: #ff9900; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.search-container .search-btn:hover {
+  background-color: #b46c00; /* Button color */
+}
+
+.sign-in-btn {
+  padding: 8px 12px; /* Button padding */
+  background-color: #333; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.sign-in-btn:hover {
+  background-color: #555; /* Lighter shade on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between links */
+    margin-top: 10px; /* Space above nav links */
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero-btn {
+  padding: 10px 20px;
+  background-color: #f60;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.hero-books img {
+  width: 150px;
+  margin: 0 10px;
+}
+
+/* What You Get Section */
+.what-you-get {
+
+  padding: 60px;
+  background-color: white;
+  text-align: center;
+}
+
+.trial-btn {
+  padding: 10px 20px;
+  margin-top: 30px;
+  background-color: #f60;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.trial-btn:hover{
+  background-color: rgb(191, 77, 2);
+}
+
+/* Editor's Picks */
+/* Editor's Picks */
+.editor-picks {
+  padding: 40px;
+  text-align: center;
+}
+
+.books-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to new lines */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 20px;
+  gap: 20px; /* Space between items */
+}
+
+.book-item {
+  flex: 1 1 150px; /* Allow items to grow and shrink, base size of 150px */
+  max-width: 200px; /* Limit maximum width for larger screens */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.book-item:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.book-item img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Optional: Add rounded corners to images */
+}
+
+.book-item h3 {
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .editor-picks {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .books-grid {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .book-item {
+    max-width: 90%; /* Make items wider on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .editor-picks {
+    padding: 10px; /* Further reduce padding on very small screens */
+  }
+
+  .book-item {
+    max-width: 100%; /* Full width on very small screens */
+  }
+}
+
+/* Listen Anywhere */
+.listen-anywhere {
+  background-color: #0f1111;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.devices img {
+  width: 200px;
+  margin: 0 20px;
+}
+
+/* Popular Podcasts */
+.popular-podcasts {
+  padding: 40px;
+  text-align: center;
+}
+
+.podcasts-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.podcast-item img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+/*listen anywhere*/
+.listen-anywhere {
+  padding: 2rem;
+  text-align: center;
+}
+
+.listen-anywhere h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.devices {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* For responsive wrapping */
+}
+
+.devices img {
+  width: 250px; /* Adjust size as needed */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .devices img {
+    width: 200px; /* Smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .devices img {
+    width: 100%; /* Full width on small devices */
+  }
+}
+
+
+/*hero */
+.hero {
+  display: flex;
+  margin-top: 30px;
+  align-items: center; /* Center the content vertically */
+  padding: 3rem;
+  background: linear-gradient(90deg, rgba(13, 30, 45, 0.7), rgba(20, 43, 61, 0.7)), url('../public/backbook.jpg'); /* Add background image with gradient */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  color: white;
+  min-height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 2rem;
+  text-align: left; /* Align text to the left */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ffda79; /* Highlighted yellow color */
+}
+
+.hero-content .hero-btn {
+  background-color: #ff9900;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .hero-btn:hover {
+  background-color: #e68500;
+}
+
+.hero-content p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+}
+
+
+.listen-anywhere {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-size: cover; /* Ensure the background covers the entire section */
+  background-position: center; /* Center the background image */
+  color: white;
+  text-align: center;
+  min-height: 400px; /* Set a minimum height */
+}
+
+.listen-anywhere h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.devices {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between device images */
+}
+
+.devices img {
+  max-width: 150px; /* Adjust as necessary */
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+.popular-podcasts {
+  padding: 3rem;
+  text-align: center;
+  background-color: #f8f8f8; /* Light background */
+}
+
+.popular-podcasts h2 {
+  font-size: 2.5rem; /* Medium size */
+  margin-bottom: 2rem;
+}
+
+.podcasts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem; /* Spacing between podcast items */
+}
+
+.podcast-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Round the corners of the image */
+  transition: transform 0.3s;
+}
+
+.podcast-item img {
+  width: 100%;
+  height: auto;
+}
+
+.podcast-item h3 {
+  padding: 1rem;
+  font-size: 1.2rem; /* Medium text size */
+}
+
+.podcast-item:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+@media (max-width: 768px) {
+  .popular-podcasts h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .podcast-item h3 {
+    font-size: 1rem; /* Smaller text on mobile */
+  }
+
+  .podcasts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+  }
+
+  .podcast-item {
+    padding: 0.5rem; /* Smaller padding for mobile */
+  }
+}
+
+.editor-picks {
+  padding: 2rem;
+  background-color: #f9f9f9; /* Mild background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.editor-picks h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem; /* Adjust size as needed */
+  color: #333; /* Text color */
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+  gap: 1rem; /* Space between grid items */
+}
+
+.book {
+  background-color: white; /* Book background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem;
+  text-align: center; /* Center align text */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for books */
+}
+
+.book img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Rounded image corners */
+}
+
+.book h3 {
+  font-size: 1.2rem; /* Adjust size as needed */
+  margin: 0.5rem 0 0.2rem; /* Spacing around title */
+}
+
+.book p {
+  font-size: 0.9rem; /* Adjust size as needed */
+  color: #555; /* Lighter color for author */
+  margin: 0; /* Remove default margin */
+}
+
+/* Footer Styles */
+/* Footer Styles */
+.footer {
+  background-color: #000000; /* Dark background */
+  color: #fff; /* White text */
+  padding: 40px 20px; /* Padding for top/bottom and left/right */
+  text-align: center; /* Center text */
+}
+
+.footer-content {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center; /* Center align content */
+  gap: 40px; /* Space between sections */
+}
+
+.footer-section {
+  width: 100%; /* Full width for each section */
+}
+
+.footer-section h3 {
+  margin-bottom: 10px; /* Space below headings */
+  font-size: 1.2em; /* Larger heading size */
+  color: #f9f9f9; /* Lighter heading color */
+}
+
+.footer-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.footer-list li {
+  margin: 5px 0; /* Space between list items */
+}
+
+.footer-list a {
+  text-decoration: none; /* Remove underline */
+  color: #b3c7d6; /* Link color */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-list a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+.footer-copyright {
+  margin-top: 20px; /* Space above copyright text */
+  color: #ccc; /* Lighter text color for copyright */
+  font-size: 0.9em; /* Smaller font size */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row; /* Align sections in a row on larger screens */
+    justify-content: space-around; /* Space between sections */
+    text-align: left; /* Align text to the left */
+  }
+
+  .footer-section {
+    width: auto; /* Auto width for sections on larger screens */
+  }
+}
