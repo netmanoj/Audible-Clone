@@ -5,12 +5,7 @@ A React-based clone of Amazon Audible, designed to provide a seamless audio book
 ## Features
 
 - Browse and search for audio books
-- Responsive design for mobile and desktop
-
-## Tech Stack
-
-- **Frontend**: React, React Router
-- **Styling**: CSS Modules / Styled Components
+- Responsive design for mobile and desktop.
 
 ## Installation
 
